@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "396ca0ba-cc09-46e5-88de-6d0f0b509490",
+		"name": "store api assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find-products-by-ids",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJJc3N1ZXIiOiJEdW1teUlzc3VlciIsIlJvbGUiOiJWaXNpdG9yIiwiZXhwIjo0MTAyMzc2NDAwMDAwfQ.IE4KJyHyGqC6JFaixwRmJaObduY2p_qyEnLMHB5b8pNHO5tRGLHTknEanbbm101ETbz1wUnX9SOTI3oRCSvwY0n5O5hmLPFeMkP3b015CN7RXxOub8AlOoEBRa-x74TOhdDpgL-GrTpqG-lXzmoqC0SbhV25fUFMWO6El9iEQdpXBVrJ8tEB5fd42vzDcjvMbLVG0N74LgzjQLpBAE3bORTelP7S3qLuE_lwswzdqFeMfWqmJpBZ8C9vOWXQG7VeaVUhPq9a7r-mFJDV5waXHawWP2mb0hp9X29zNNN9fafTULM9rjy9U-sa4f_SGUmx7W14ES5rrq3yugkDP9YWoQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productIds\": [\"0000\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/find-products-by-ids",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"find-products-by-ids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upsert-products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJJc3N1ZXIiOiJEdW1teUlzc3VlciIsIlJvbGUiOiJWaXNpdG9yIiwiZXhwIjo0MTAyMzc2NDAwMDAwfQ.IE4KJyHyGqC6JFaixwRmJaObduY2p_qyEnLMHB5b8pNHO5tRGLHTknEanbbm101ETbz1wUnX9SOTI3oRCSvwY0n5O5hmLPFeMkP3b015CN7RXxOub8AlOoEBRa-x74TOhdDpgL-GrTpqG-lXzmoqC0SbhV25fUFMWO6El9iEQdpXBVrJ8tEB5fd42vzDcjvMbLVG0N74LgzjQLpBAE3bORTelP7S3qLuE_lwswzdqFeMfWqmJpBZ8C9vOWXQG7VeaVUhPq9a7r-mFJDV5waXHawWP2mb0hp9X29zNNN9fafTULM9rjy9U-sa4f_SGUmx7W14ES5rrq3yugkDP9YWoQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"0000\",\r\n            \"name\": \"item - 0000\",\r\n            \"price\": \"$10\"\r\n        },\r\n        {\r\n            \"productId\": \"0001\",\r\n            \"name\": \"item - 0001\",\r\n            \"price\": \"$11111111\"\r\n        },\r\n        {\r\n            \"productId\": \"0002\",\r\n            \"name\": \"item - 0002\",\r\n            \"price\": \"$12\"\r\n        },\r\n        {\r\n            \"productId\": \"0003\",\r\n            \"name\": \"item - 0003\",\r\n            \"price\": \"$33333333313\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/upsert-products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upsert-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-products-by-ids",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJJc3N1ZXIiOiJEdW1teUlzc3VlciIsIlJvbGUiOiJWaXNpdG9yIiwiZXhwIjo0MTAyMzc2NDAwMDAwfQ.IE4KJyHyGqC6JFaixwRmJaObduY2p_qyEnLMHB5b8pNHO5tRGLHTknEanbbm101ETbz1wUnX9SOTI3oRCSvwY0n5O5hmLPFeMkP3b015CN7RXxOub8AlOoEBRa-x74TOhdDpgL-GrTpqG-lXzmoqC0SbhV25fUFMWO6El9iEQdpXBVrJ8tEB5fd42vzDcjvMbLVG0N74LgzjQLpBAE3bORTelP7S3qLuE_lwswzdqFeMfWqmJpBZ8C9vOWXQG7VeaVUhPq9a7r-mFJDV5waXHawWP2mb0hp9X29zNNN9fafTULM9rjy9U-sa4f_SGUmx7W14ES5rrq3yugkDP9YWoQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productIds\": [\"0000\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delete-products-by-ids",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-products-by-ids"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
